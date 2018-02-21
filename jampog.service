@@ -1,0 +1,12 @@
+[Unit]
+Description=jampog
+
+[Service]
+ExecStart=/usr/local/bin/jampog +exec server.cfg
+Restart=always
+RuntimeMaxSec=86400
+NoNewPrivilegs=true
+PrivateTmp=true
+
+[Install]
+WantedBy=default.target
