@@ -5,8 +5,9 @@ INSTALL ?= /usr/bin/install
 assets:
 	bin/steam.sh
 	@wget https://github.com/jampio/jampog/releases/download/v1.01/jampgamei386.so -O ~/.local/share/jampog/base/jampgamei386.so
+	$(INSTALL) server.cfg -D -t ~/.local/share/jampog/base/
 
-.PHONY: install
-install:
-	$(INSTALL) jampog.service -D -t ~/.config/systemd/user/
+.PHONY: service
+service:
+	$(INSTALL) jampog.service -D -t ~/.config/systemd/user/ && systemctl enable jampog --user && systemctl start jampog --user
 

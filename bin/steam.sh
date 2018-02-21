@@ -13,8 +13,9 @@ echo &&
 	 +app_update 6020 validate +quit
 STEAM_PATH=/tmp/SteamJKA/GameData/base
 INSTALL_PATH=/home/$USER/.local/share/jampog/base/
-sudo mkdir -p $INSTALL_PATH
+mkdir -p $INSTALL_PATH
 [ -f $STEAM_PATH/assets0.pk3 ] && cp $STEAM_PATH/assets0.pk3 $INSTALL_PATH
 [ -f $STEAM_PATH/assets1.pk3 ] && cp $STEAM_PATH/assets1.pk3 $INSTALL_PATH
 [ -f $STEAM_PATH/assets2.pk3 ] && cp $STEAM_PATH/assets2.pk3 $INSTALL_PATH
 [ -f $STEAM_PATH/assets3.pk3 ] && cp $STEAM_PATH/assets3.pk3 $INSTALL_PATH
+rm -rf /home/$USER/Steam/ /tmp/SteamJKA/ /tmp/steamcmd/ /tmp/steamcmd.tar.gz
